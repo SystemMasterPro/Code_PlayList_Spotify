@@ -1,0 +1,25 @@
+<h1 class="text-center my-4">USUARIOS ACTIVOS EN LA BASE DE DATOS DEL BANCO PICHINCHA</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="color: aliceblue;">Nombre</th>
+            <th style="color: aliceblue;">Apellido</th>
+            <th style="color: aliceblue;">Cedula</th>
+            <th style="color: aliceblue;">Correo</th>
+            <th style="color: aliceblue;">Opciones</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuario">
+            <td style="color:darkorange;">{{usuario.nombres}}</td>
+            <td style="color:darkorange;">{{usuario.apellidos}}</td>
+            <td style="color:darkorange;">{{usuario.cedula}}</td>
+            <td style="color:darkorange;">{{usuario.correo}}</td>
+            <td>
+                <button [routerLink]="['/editar-usuario/:id',usuario.id]" class="btn btn-info ">Editar</button>
+                <button (click)="eliminar(usuario)" class="btn btn-danger"><i class="fas fa-edit"></i> Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

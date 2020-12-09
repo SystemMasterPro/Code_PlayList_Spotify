@@ -1,0 +1,105 @@
+<!-- <h1 class="text-center my-3">PIPES</h1> -->
+
+<div class="card">
+    <div class="card-header bg-secondary">
+        CONCEPTO
+    </div>
+
+    <div class="card-body">
+        Los pipes son funciones de Angular que nos permiten  <b>Transformar</b> visualmente 
+        la informacion , por ejemplo: cambiar texto a mayuscula o dar formatos de fecha.
+    </div>
+</div>
+
+<table class="table table-striped my-3">
+
+    <thead class="bg-info text-white">
+        <tr>
+            <th>Dato Inical</th>
+            <th>Pipe Utilizado</th>
+            <th>Resultado</th>
+        </tr>
+    </thead>
+
+
+    <tbody style="color:darkorange;">
+        <tr>
+            <td>{{dato1}}</td>
+            <td>uppercase</td>
+            <td>{{dato1 | uppercase}}</td>
+        </tr>
+
+        <tr>
+            <td>{{dato1}}</td>
+            <td>lowercase</td>
+            <td>{{dato1 | lowercase}}</td>
+        </tr>
+
+        <tr>
+            <td>{{dato1}}</td>
+            <td>slice</td>
+            <td>{{dato1 | slice:3}}</td>
+        </tr>
+
+        <tr>
+            <td>{{dato1}}</td>
+            <td>slice:0:3</td>
+            <td>{{dato1 | slice:0:3}}</td>
+        </tr>
+
+        <tr>
+            <td>{{vector}}</td>
+            <td>slice:1:5</td>
+            <td>{{vector | slice:1:5}}</td>
+        </tr>
+
+        <tr>
+            <td>{{PI}}</td>
+            <td>number</td>
+            <td>{{PI | number}}</td>
+        </tr>
+
+        <tr>
+            <td>{{PI}}</td>
+            <td>number:'.0-2'</td>
+            <td>{{PI | number:'.0-2'}}</td>
+        </tr>
+
+        <tr>
+            <td>{{PI}}</td>
+            <td>number:'1.0-0'</td>
+            <td>{{PI | number:'1.0-0'}}</td>
+        </tr>
+
+        <tr>
+            <td>{{persona}}</td>
+            <td>json</td>
+            <pre>
+                <td style="color:darkorange;">{{persona | json}}</td>
+            </pre>
+        </tr>
+
+        <tr>
+            <td> {{ valorPromesa }} </td>
+            <td>async</td>
+            <td><pre style="color:darkorange;">{{ valorPromesa | async }} </pre> </td>
+          </tr>
+
+          <tr>
+            <td> {{ myDate }} </td>
+            <td>date:'EEE, d of LLL of yyyy'</td>
+            <td>
+              <pre style="color:darkorange;">{{ myDate | date:'EEE, d of LLL of yyyy' }} </pre>
+            </td>
+          </tr>
+
+            <tr>
+                <td> {{ cadena }} </td>
+                <td>pipePersonalizado</td>
+                <td>
+                    <pre style="color:darkorange;">{{ cadena | Caracteres}} </pre>
+                </td>
+            </tr>
+          
+    </tbody>
+</table>

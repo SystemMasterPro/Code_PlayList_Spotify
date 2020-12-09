@@ -1,0 +1,24 @@
+<h1 class="text-center my-3">Buscar Artista Favorito</h1>
+
+<div class="row"  style="margin:0px auto; display:block;">
+    <div class="col">
+        <!-- con el asterisco le convertimos en un avariable a la etiqueta -->
+        <input #palabra (keyup)="buscar(palabra.value)" class="form-control" type="text" placeholder="Nombre del artista...">
+    </div>
+</div>
+
+<div class="card-columns my-3">
+    <div  (click)="verArtistas(item.id)" class="card" *ngFor="let item of artistas">
+        <img class="card-img-top" [src]="item.images | Imagenes" alt="Imagen no encontrada">
+        <div class="card-body">
+            <h5 class="card-title">
+                {{item.name}}
+            </h5>
+
+            <span style="display: block;margin: 5px;" class="badge badge-info" *ngFor="let artista of item.artists">
+                {{artista.name}}
+            </span>
+
+        </div>
+    </div>
+</div>
